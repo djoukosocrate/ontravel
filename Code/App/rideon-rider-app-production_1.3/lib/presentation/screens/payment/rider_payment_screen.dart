@@ -744,10 +744,10 @@ void initState() {
 
           const SizedBox(height: 12),
 
-          // Online Payment Option
+          // Mobile Money Payment Option
           _buildPaymentOption(
             context: context,
-            icon: Icons.credit_card,
+            icon: Icons.smartphone,
             title: "Online".translate(context),
             subtitle: "Pay securely online".translate(context),
             method: PaymentMethod.online,

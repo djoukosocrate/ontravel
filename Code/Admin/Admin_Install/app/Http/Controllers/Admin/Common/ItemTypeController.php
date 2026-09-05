@@ -145,6 +145,7 @@ class ItemTypeController extends Controller
             'name' => $request->name,
             'description' => $request->description,
             'status' => $request->status,
+            'module' => $this->getTheModule(explode('.', Route::currentRouteName())[1] ?? null),
             'max_weight' => in_array(2, $request->service_types ?? []) ? $request->max_weight : null,
         ]);
 
