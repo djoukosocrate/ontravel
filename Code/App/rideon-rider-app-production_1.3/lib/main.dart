@@ -50,7 +50,7 @@ void main() async {
               navigatorKey: navigatorKey,
               builder: BotToastInit(),  
               theme: ThemeData(
-                fontFamily: 'Gilroy Regular',
+                fontFamily: 'Poppins Regular',
               ),
               supportedLocales: const [
                 Locale('en', 'US'),

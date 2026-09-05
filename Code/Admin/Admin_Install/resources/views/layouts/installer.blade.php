@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Installer - {{ __('RideOn Taxi') }}</title>
+    <title>Installer - {{ __('OnTravel') }}</title>
     <!-- Bootstrap CSS -->
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -149,7 +149,7 @@
 <body>
     <div class="installer-container">
         <div class="installer-header">
-            <h1>{{ __('RideOn Taxi') }}</h1>
+            <h1>{{ __('OnTravel') }}</h1>
         </div>
         <div class="installer-steps">
             @yield('steps')

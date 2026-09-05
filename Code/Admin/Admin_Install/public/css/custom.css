@@ -1,13 +1,14 @@
 :root {
-  --primary-color: #FFC91F;
-  /* Main theme color */
-  --primary-text-color: #222;
-  /* Text color for on-primary backgrounds */
-  --secondary-color: #f4f4f4;
-  --hover-background: #E6B51C;
-  /* Darker shade of primary for hover */
-  --dark-background: #3A3A3A;
-  /* Dark background for sidebars/panels */
+  --primary-color: #EF9F00;
+  /* OnTravel amber — main theme color */
+  --primary-text-color: #221D1A;
+  /* Ink — text color for on-primary backgrounds */
+  --secondary-color: #F0EAE0;
+  /* Sand — light neutral surface */
+  --hover-background: #B87500;
+  /* Amber deep — hover/pressed state */
+  --dark-background: #221D1A;
+  /* Ink — dark background for sidebars/panels */
   --required-color: red;
 }
 

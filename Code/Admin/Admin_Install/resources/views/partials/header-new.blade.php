@@ -101,7 +101,7 @@
                         </li>
 
                         <li>
-                            <a href="https://welcome-rideon.unibooker.app/" target="_blank" class="icon-circle" title="Visit Landing Page">
+                            <a href="{{ config('app.landing_url') }}" target="_blank" class="icon-circle" title="Visit Landing Page">
                                 <i class="fa fa-globe"></i>
                             </a>
                         </li>

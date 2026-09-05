@@ -319,7 +319,7 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
                   builder: BotToastInit(),
                   navigatorObservers: [BotToastNavigatorObserver()],
                   navigatorKey: navigatorKey,
-                  theme: ThemeData(fontFamily: 'Gilroy Regular'),
+                  theme: ThemeData(fontFamily: 'Poppins Regular'),
                   debugShowCheckedModeBanner: false,
                   locale: appLocale,
                   supportedLocales: const [

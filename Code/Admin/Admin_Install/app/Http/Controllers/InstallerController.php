@@ -90,7 +90,7 @@ class InstallerController extends Controller
 
             $key = base64_encode(random_bytes(32));
 
-            $output = 'APP_NAME=RideOn' . time() . "\n" .
+            $output = 'APP_NAME=OnTravel' . "\n" .
                 "APP_ENV=live\n" .
                 'APP_KEY=base64:' . $key . "\n" .
                 "APP_DEBUG=false\n" .
