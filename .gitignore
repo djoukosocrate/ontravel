@@ -1,0 +1,74 @@
+# Distribution archives (redundant with extracted source; keep the repo out of GitHub's size limits)
+*.zip
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.idea/
+.vscode/
+*.iml
+
+# ------------------------------------------------------------------
+# Laravel backend (Code/Admin/Admin_Install)
+# ------------------------------------------------------------------
+**/Admin_Install/vendor/
+**/Admin_Install/node_modules/
+**/Admin_Install/.env
+**/Admin_Install/.env.backup
+**/Admin_Install/.phpunit.result.cache
+**/Admin_Install/composer.phar
+**/Admin_Install/tmp/
+**/Admin_Install/bootstrap/cache/*.php
+**/Admin_Install/storage/*.key
+**/Admin_Install/storage/app/public/*
+!**/Admin_Install/storage/app/public/.gitignore
+**/Admin_Install/storage/framework/cache/data/*
+**/Admin_Install/storage/framework/sessions/*
+**/Admin_Install/storage/framework/views/*
+**/Admin_Install/storage/framework/testing/*
+**/Admin_Install/storage/logs/*.log
+**/Admin_Install/storage/debugbar/
+**/Admin_Install/storage/firebase/*.json
+**/Admin_Install/public/storage
+**/Admin_Install/public/hot
+!**/Admin_Install/storage/**/.gitignore
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+# ------------------------------------------------------------------
+# Flutter apps (both driver and rider)
+# ------------------------------------------------------------------
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/build/
+**/android/.gradle/
+**/android/app/.cxx/
+**/android/local.properties
+**/android/key.properties
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/App.framework
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/build/
+**/macos/Pods/
+**/macos/Flutter/ephemeral/
+**/linux/flutter/ephemeral/
+**/windows/flutter/ephemeral/
+**/*.apk
+**/*.aab
+**/*.ipa
+**/functions/node_modules/
+**/.firebase/
+
+# Never commit real Firebase Auth credential files (server-side)
+**/Admin_Install/storage/firebase/firebase_credentials.json
