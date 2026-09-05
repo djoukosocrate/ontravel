@@ -86,7 +86,7 @@ return [
     'manage_settings' => 'إدارة الإعدادات',
     'admin' => 'مدير',
     'vendor' => 'البائع',
-    'site_title' => 'توكي',
+    'site_title' => 'OnTravel',
     'contactus_title' => 'تواصل معنا',
     'copy' => 'نسخ',
     'csv' => 'CSV',

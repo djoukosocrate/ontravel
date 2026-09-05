@@ -88,7 +88,7 @@ return [
     'manage_settings' => 'Gérer les paramètres',
     'admin' => 'Admin',
     'vendor' => 'Vendeur',
-    'site_title' => 'Tukki',
+    'site_title' => 'OnTravel',
     'contactus_title' => 'Contactez-nous',
     'copy' => 'Copier',
     'csv' => 'CSV',

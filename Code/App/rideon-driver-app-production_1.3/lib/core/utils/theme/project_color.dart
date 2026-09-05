@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../../services/data_store.dart';
 
-Color themeColor = const Color(0xffFFC91F);
-Color themeColor2 = const Color(0xff226EAB);
+Color themeColor = const Color(0xffEF9F00); // OnTravel amber
+Color themeColor2 = const Color(0xff356F5F); // OnTravel teal
 Color whiteColor = const Color(0xffFFFFFF);
 Color blackColor = const Color.fromARGB(255, 6, 6, 6);
 Color ginColor = const Color(0xFFE4EFE5);
 Color bgcolor = whiteColor;
 Color darkblue = const Color(0xff3D5BF6);
-Color yelloColor = const Color(0xffFFBB0D);
+Color yelloColor = const Color(0xffEF9F00); // OnTravel amber
 Color redColor = const Color(0xffFF4747);
 Color lightgrey = const Color(0xffDDDDDD);
 Color darkmode = const Color(0xff111315);
@@ -26,14 +26,14 @@ Color orangeColor = const Color(0xffff9933);
 Color lightyello = const Color(0xfff4c430);
 Color redgradient = const Color(0xffFF6B6B);
 Color lighRedgradient = const Color.fromARGB(255, 253, 244, 244);
-Color yellowShadow = const Color(0xFFFFF6E9);
+Color yellowShadow = const Color(0xFFF6E3BD); // OnTravel amber tint
 Color greentext = const Color(0xff0d7a20);
 Color bordercolor = const Color(0xffF5F2FB);
 Color blackColor2 = const Color.fromARGB(255, 49, 15, 15);
 Color greyColor2 = const Color.fromARGB(255, 198, 202, 215);
 Color greyColor22 = const Color(0xffA7AEC1);
 Color darkblue2 = const Color(0xff3D5BF6);
-Color yelloColor2 = const Color(0xffFFBB0D);
+Color yelloColor2 = const Color(0xffEF9F00); // OnTravel amber
 Color redColor2 = const Color(0xffFF4747);
 Color lightgrey2 = const Color(0xffDDDDDD);
 Color lightBlack = const Color(0x73000000);

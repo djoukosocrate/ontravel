@@ -1,5 +1,5 @@
 name: ride_on
-description: "RideOn is a smart and reliable taxi booking app built for your daily travel needs. With trusted drivers, quick pickups, ride history, and 24/7 customer support, Zup makes every journey smooth and stress-free."
+description: "OnTravel is a smart and reliable mobility app built for daily travel in Cameroon. With trusted drivers, moto and car rides, quick pickups, and 24/7 support, OnTravel makes every journey smooth and stress-free."
 
 publish_to: 'none' 
 
@@ -68,6 +68,7 @@ dev_dependencies:
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
+  remove_alpha_ios: true
   image_path: "assets/images/appicons.png"
   image_path_ios: "assets/images/appicons.png"
 

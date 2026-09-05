@@ -156,7 +156,7 @@ return [
     'manage_settings' => 'Manage Settings',
     'admin' => 'Admin',
     'vendor' => 'Driver',
-    'site_title' => 'RideOn Unibooker',
+    'site_title' => 'OnTravel',
     'contactus_title' => 'Contact Us',
     'copy' => 'Copy',
     'csv' => 'CSV',
