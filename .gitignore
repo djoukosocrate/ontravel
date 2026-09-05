@@ -1,0 +1,38 @@
+# === Secrets — JAMAIS versionnés ===
+.env
+.env.*
+!.env.example
+**/google-services.json
+**/GoogleService-Info.plist
+serviceAccountKey.json
+*.pem
+*.key
+
+# === Flutter / Dart ===
+**/build/
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/ios/Flutter/.last_build_id
+**/android/.gradle/
+**/android/local.properties
+**/*.iml
+**/.idea/
+
+# === Node / Firebase Functions ===
+**/node_modules/
+**/firebase-debug.log
+**/firestore-debug.log
+**/ui-debug.log
+**/.firebase/
+
+# === Admin dashboard (web) ===
+admin_dashboard/dist/
+admin_dashboard/.next/
+
+# === OS / éditeurs ===
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
