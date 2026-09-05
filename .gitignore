@@ -21,31 +21,31 @@ desktop.ini
 *.swp
 
 # ------------------------------------------------------------------
-# Laravel backend (Code/Admin/Admin_Install)
+# Laravel backend (admin_dashboard)
 # ------------------------------------------------------------------
-**/Admin_Install/vendor/
-**/Admin_Install/node_modules/
-**/Admin_Install/.env
-**/Admin_Install/.env.backup
-**/Admin_Install/.phpunit.result.cache
-**/Admin_Install/composer.phar
-**/Admin_Install/tmp/
-**/Admin_Install/bootstrap/cache/*.php
-**/Admin_Install/storage/*.key
-**/Admin_Install/storage/app/public/*
-!**/Admin_Install/storage/app/public/.gitignore
-**/Admin_Install/storage/framework/cache/data/*
-**/Admin_Install/storage/framework/sessions/*
-**/Admin_Install/storage/framework/views/*
-**/Admin_Install/storage/framework/testing/*
-**/Admin_Install/storage/logs/*.log
-**/Admin_Install/storage/debugbar/
-**/Admin_Install/storage/firebase/*.json
-**/Admin_Install/public/storage
-**/Admin_Install/public/hot
-!**/Admin_Install/storage/**/.gitignore
+admin_dashboard/vendor/
+admin_dashboard/node_modules/
+admin_dashboard/.env
+admin_dashboard/.env.backup
+admin_dashboard/.phpunit.result.cache
+admin_dashboard/composer.phar
+admin_dashboard/tmp/
+admin_dashboard/bootstrap/cache/*.php
+admin_dashboard/storage/*.key
+admin_dashboard/storage/app/public/*
+!admin_dashboard/storage/app/public/.gitignore
+admin_dashboard/storage/framework/cache/data/*
+admin_dashboard/storage/framework/sessions/*
+admin_dashboard/storage/framework/views/*
+admin_dashboard/storage/framework/testing/*
+admin_dashboard/storage/logs/*.log
+admin_dashboard/storage/debugbar/
+admin_dashboard/storage/firebase/*.json
+admin_dashboard/public/storage
+admin_dashboard/public/hot
+!admin_dashboard/storage/**/.gitignore
 # Never commit real Firebase Auth credential files (server-side)
-**/Admin_Install/storage/firebase/firebase_credentials.json
+admin_dashboard/storage/firebase/firebase_credentials.json
 Homestead.json
 Homestead.yaml
 npm-debug.log
@@ -87,7 +87,3 @@ yarn-error.log
 **/firestore-debug.log
 **/ui-debug.log
 **/.firebase/
-
-# === Admin dashboard (web), if ever added ===
-admin_dashboard/dist/
-admin_dashboard/.next/
