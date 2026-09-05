@@ -34,7 +34,9 @@ OnTravel adapte chaque maillon du parcours à ces réalités : choix voiture **o
 ## 5. Innovation
 
 - **Mobile Money natif** — le paiement en ligne est explicitement du Mobile Money (MTN/Orange), pas une carte bancaire, avec un mode démo réaliste sans dépendre d'un compte marchand réel pendant le hackathon.
-- **Sécurité active pendant la course** — bouton SOS et partage de trajet en direct, pas seulement un numéro d'urgence statique.
+- **Sécurité active pendant la course** — bouton SOS *et* un bouton "Partager ma course" qui envoie par WhatsApp le nom/plaque du chauffeur, le départ/destination et un lien Google Maps vers sa position la plus récente à un proche.
+- **Annonces vocales** — les changements de statut d'une course ("chauffeur accepté", "course commencée", "vous êtes arrivé") sont aussi annoncés à voix haute en français, utile en conduisant comme pour l'accessibilité.
+- **Assistant IA embarqué** — un assistant conversationnel (Google Gemini) intégré à l'app répond en français/anglais aux questions sur la réservation, le paiement Mobile Money ou la sécurité ; la clé API reste côté serveur, jamais exposée au client.
 - **Estimation consciente du trafic** — le prix affiché avant réservation intègre déjà le trafic en temps réel (Google Directions, `departure_time=now`), pas une estimation à distance fixe.
 - **Repères locaux** — sélection rapide de quartiers/lieux connus de Douala/Yaoundé en complément de l'autocomplétion classique.
 - **Bilingue par conception** — français par défaut, anglais disponible, cohérent avec la réalité camerounaise.
@@ -97,6 +99,8 @@ php artisan key:generate
 ```
 
 > **Note PHP** : les dépendances verrouillées (`composer.lock`) exigent PHP ≥ 8.3. Si votre PHP par défaut est en 8.2 (ex. certaines installations XAMPP), utilisez un binaire 8.3+ explicite pour toutes les commandes `composer`/`artisan` ci-dessous.
+>
+> **Note Windows/SSL** : si les appels sortants HTTPS (ex. l'assistant IA) échouent avec `cURL error 60: SSL certificate problem`, c'est un souci classique de bundle de certificats manquant sous Windows. Le projet embarque déjà `storage/certs/cacert.pem` et le contrôleur l'utilise directement — aucune configuration `php.ini` n'est nécessaire pour ce point précis.
 
 **Apps Flutter (passager et chauffeur), depuis chacun des deux dossiers d'app :**
 
@@ -197,6 +201,7 @@ Code/
 - Le paiement Mobile Money fonctionne en **mode démo** (aucun identifiant marchand réel configuré) — le flux est complet et réaliste à l'écran, sans mouvement d'argent réel.
 - Les repères locaux rapides couvrent un échantillon de lieux connus de Douala/Yaoundé, pas une base exhaustive.
 - L'assistant IA dépend du palier gratuit de l'API Gemini (limites de requêtes/minute).
+- Partage de trajet, annonces vocales et assistant IA sont implémentés côté application **passager** ; l'application chauffeur n'a pas encore ces trois écrans (le bouton SOS existe des deux côtés).
 - Les identifiants natifs des applications (`applicationId` Android, bundle iOS) ont été conservés tels quels pour ne pas casser la configuration Firebase existante ; seuls le nom affiché, l'icône et l'identité visuelle ont été changés.
 - Le fichier Figma ne couvre pas la totalité de la liste de référence du manuel (non exigée par le règlement) mais un ensemble représentatif des trois parcours (passager, chauffeur, admin) — voir section 19.
 
@@ -217,9 +222,10 @@ Maquettes et système de design : **[OnTravel — Maquettes](https://www.figma.c
 
 Parcours recommandé pour la présentation :
 1. Panel admin (section 14) → aperçu des courses/utilisateurs/statistiques.
-2. App passager : inscription par téléphone → accueil → sélection d'un repère local → estimation voiture/moto en FCFA → réservation → suivi en direct → bouton SOS/partage de trajet.
+2. App passager : inscription par téléphone → accueil → sélection d'un repère local → estimation voiture/moto en FCFA → réservation → suivi en direct (annonces vocales à chaque changement de statut) → bouton SOS/partage de trajet.
 3. App chauffeur : passage en service → réception d'une demande → acceptation → navigation → fin de course → revenus.
 4. Paiement Mobile Money en mode démo lors de la confirmation de course.
+5. Assistant IA (menu passager) : poser une question sur la réservation ou le paiement.
 
 ---
 
