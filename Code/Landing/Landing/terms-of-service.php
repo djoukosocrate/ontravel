@@ -5,115 +5,75 @@
             <div class="row">
                 <div class="col-12">
                     <div>
-                        <h4>Terms and Conditions</h4>
+                        <h4>Conditions d'utilisation</h4>
                         <p>
-                            This Privacy Policy outlines how we collect, use, disclose, and protect your personal
-                            information when you visit our website. By accessing or using our website, you agree to the
-                            terms of this Privacy Policy and consent to the collection and use of your information as
-                            described herein. We are committed to ensuring that your privacy is protected. Should we ask
-                            you to provide certain information by which you can be identified when using this website,
-                            you can be assured that it will only be used in accordance with this Privacy Policy. We
-                            regularly review our compliance with this policy and ensure that all data handling practices
-                            are transparent and secure.
+                            Les présentes conditions régissent l'utilisation de l'application OnTravel par les
+                            passagers et les chauffeurs. En créant un compte ou en utilisant l'application, vous
+                            acceptez ces conditions. OnTravel met en relation des passagers cherchant un déplacement
+                            et des chauffeurs indépendants (voiture ou moto-taxi) ; OnTravel n'est pas lui-même
+                            transporteur.
                         </p>
                     </div>
                     <br>
                     <div>
-                        <h4>Information We Collect</h4>
-                        <p>
-                            We collect personal information such as names, email addresses, and browsing data to enhance
-                            user experience and provide personalized services. This data helps us understand user
-                            preferences and improve our offerings. Your privacy is important to us, and we ensure that
-                            all information is handled with strict confidentiality.
-                        </p>
+                        <h4>Comptes et éligibilité</h4>
                         <ul style="margin-left:30px; list-style:circle;">
-                            <li style="margin-bottom:10px;">
-                                <span><strong>Personal Information:</strong></span>
-                                <span>Name, email address, phone number, and other contact details.</span>
-                            </li>
-                            <li style="margin-bottom:10px;">
-                                <span><strong>Usage Data:</strong></span>
-                                <span>Information about how you use our website, including your IP address, browser
-                                    type, and pages visited.</span>
-                            </li>
-                            <li style="margin-bottom:10px;">
-                                <span><strong>Cookies and Tracking technology:</strong></span>
-                                <span>We use cookies to enhance your experience on our website. You can manage your
-                                    cookie preferences through your browser settings.</span>
-                            </li>
+                            <li style="margin-bottom:10px;">Un compte passager nécessite un numéro de téléphone
+                                valide, vérifié par code de confirmation.</li>
+                            <li style="margin-bottom:10px;">Un compte chauffeur nécessite un permis de conduire
+                                valide, les papiers du véhicule, et une vérification d'identité avant activation.</li>
+                            <li style="margin-bottom:10px;">Les informations fournies doivent être exactes et tenues
+                                à jour.</li>
                         </ul>
                     </div>
                     <br>
                     <div>
-                        <h4>How We Use Your Information</h4>
+                        <h4>Réservation, tarification et annulation</h4>
                         <p>
-                            We use your information to provide and improve our services, ensuring a personalized
-                            experience tailored to your needs. This includes processing transactions, communicating
-                            updates, and responding to inquiries. Additionally, we use your data for analytical purposes
-                            to enhance our offerings and for security measures to protect against fraud.
+                            Le prix estimé (distance, durée avec trafic en temps réel, type de véhicule) est affiché
+                            avant la confirmation de la réservation. Une course peut être annulée avant la prise en
+                            charge ; des frais d'annulation peuvent s'appliquer selon la politique en vigueur si
+                            l'annulation intervient après qu'un chauffeur a accepté la course.
                         </p>
+                    </div>
+                    <br>
+                    <div>
+                        <h4>Paiement</h4>
+                        <p>
+                            Les courses peuvent être réglées par Mobile Money (MTN Mobile Money, Orange Money) ou en
+                            espèces directement auprès du chauffeur, selon l'option choisie au moment de la
+                            réservation. Les identifiants de paiement ne sont jamais partagés avec le chauffeur.
+                        </p>
+                    </div>
+                    <br>
+                    <div>
+                        <h4>Conduite attendue</h4>
                         <ul style="margin-left:30px; list-style:circle;">
-                            <li style="margin-bottom:10px;">To provide and maintain our services.</li>
-                            <li style="margin-bottom:10px;">To improve and personalize your experience on our website.
-                            </li>
-                            <li style="margin-bottom:10px;">To communicate with you, including sending updates and
-                                promotional materials.</li>
-                            <li style="margin-bottom:10px;">To analyze website usage and improve our services.</li>
+                            <li style="margin-bottom:10px;">Les passagers et chauffeurs s'engagent à un comportement
+                                respectueux ; tout signalement pour comportement abusif peut entraîner une suspension
+                                du compte.</li>
+                            <li style="margin-bottom:10px;">Le bouton SOS et le partage de trajet sont fournis à
+                                titre d'assistance et ne remplacent pas les services d'urgence officiels.</li>
+                            <li style="margin-bottom:10px;">Les chauffeurs sont seuls responsables du respect du code
+                                de la route.</li>
                         </ul>
                     </div>
                     <br>
                     <div>
-                        <h4>Sharing Your Information</h4>
+                        <h4>Limitation de responsabilité</h4>
                         <p>
-                            We do not sell, trade, or otherwise transfer your personal information to outside parties
-                            except as described in this Privacy Policy. We take reasonable steps to ensure that any
-                            third parties with whom we share your personal information are bound by appropriate
-                            confidentiality and security obligations regarding your personal information.
+                            OnTravel agit en tant qu'intermédiaire technique entre passagers et chauffeurs
+                            indépendants. Dans la mesure permise par la loi camerounaise applicable, OnTravel ne
+                            saurait être tenu responsable des faits survenus pendant le transport lui-même, qui
+                            relèvent de la responsabilité du chauffeur et, le cas échéant, de son assurance.
                         </p>
-                        <p>
-                            We understand the importance of maintaining the privacy and security of your personal
-                            information. Therefore, we implement stringent measures to protect your data from
-                            unauthorized access, use, or disclosure. Our commitment to safeguarding your privacy
-                            includes:
-                        </p>
-                        <ul style="margin-left:30px; list-style:circle;">
-                            <li style="margin-bottom:10px;">
-                                <strong>Data Encryption:</strong>
-                                <span>We use advanced encryption technologies to protect your personal information
-                                    during transmission and storage. This ensures that your data is secure and
-                                    inaccessible to unauthorized parties.</span>
-                            </li>
-                            <li style="margin-bottom:10px;">
-                                <strong>Access Controls:</strong>
-                                <span>We restrict access to your personal information to only those employees,
-                                    contractors, and agents who need to know that information to process it on our
-                                    behalf. These individuals are subject to strict confidentiality obligations and may
-                                    be disciplined or terminated if they fail to meet these obligations.</span>
-                            </li>
-                            <li style="margin-bottom:10px;">
-                                <strong>Regular Audits:</strong>
-                                <span>We conduct regular audits of our data handling practices and security measures to
-                                    ensure compliance with this Privacy Policy and applicable laws. This helps us
-                                    identify and address any potential vulnerabilities in our systems.</span>
-                            </li>
-                            <li style="margin-bottom:10px;">
-                                <strong>Incident Response:</strong>
-                                <span>In the unlikely event of a data breach, we have established procedures to respond
-                                    promptly and effectively. We will notify you and any relevant authorities as
-                                    required by law and take all necessary steps to mitigate the impact of the
-                                    breach.</span>
-                            </li>
-                        </ul>
                     </div>
                     <br>
                     <div>
-                        <h4>Contact Us</h4>
+                        <h4>Nous contacter</h4>
                         <p>
-                            If you have any questions about our privacy policy, please contact <a
-                                href="/ovoride/demo/contact"><strong>with us</strong></a>. Our team is available to
-                            assist you with any inquiries or concerns you may have regarding our privacy policy. We
-                            value your privacy and are committed to ensuring that your experience on our website is
-                            transparent and satisfactory.
+                            Pour toute question sur ces conditions, contactez-<a
+                                href="index.php#contact"><strong>nous</strong></a>.
                         </p>
                     </div>
                     <br>
