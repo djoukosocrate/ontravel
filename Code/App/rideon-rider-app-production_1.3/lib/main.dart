@@ -53,6 +53,7 @@ void main() async {
                 fontFamily: 'Poppins Regular',
               ),
               supportedLocales: const [
+                Locale('fr', 'FR'),
                 Locale('en', 'US'),
                 Locale('ar', 'AR'),
               ],

@@ -31,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   final _formKey = GlobalKey<FormState>();
 
-  String selectedCountryCode = "+91";
+  String selectedCountryCode = "+237";
   String defaultCountry = "IN";
 
   @override
@@ -75,7 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       .text,
                                   countryCode:
                                       state.loginModel.data?.phoneCountry ??
-                                          "+91",
+                                          "+237",
                                   defaultCountry:
                                       state.loginModel.data?.defaultCountry ??
                                           "IN",

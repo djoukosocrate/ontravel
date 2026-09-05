@@ -51,7 +51,7 @@ class _EditProfileState extends State<EditProfile> {
 
     textEditingEditProfileNumberController.text = loginModel?.data?.phone ?? "";
     textEditingEditProfileEmailController.text = loginModel?.data?.email ?? "";
-    context.read<SetCountryCubit>().setCountry(dialCode: loginModel?.data?.phoneCountry??"+91", countryCode: loginModel?.data?.defaultCountry??"IN");
+    context.read<SetCountryCubit>().setCountry(dialCode: loginModel?.data?.phoneCountry??"+237", countryCode: loginModel?.data?.defaultCountry??"CM");
 
 
   }
@@ -277,7 +277,7 @@ class _EditProfileState extends State<EditProfile> {
                               children: [
                                 InkWell(
                                     onTap: () {
-                                      context.read<SetCountryCubit>().setCountry(dialCode: loginModel?.data?.phoneCountry??"+91", countryCode: loginModel?.data?.defaultCountry??"IN");
+                                      context.read<SetCountryCubit>().setCountry(dialCode: loginModel?.data?.phoneCountry??"+237", countryCode: loginModel?.data?.defaultCountry??"CM");
 
                                       goTo(PhoneUpdateScreen(
                                           phone:

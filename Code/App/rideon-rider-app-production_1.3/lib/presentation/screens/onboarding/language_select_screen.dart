@@ -24,6 +24,7 @@ class _SelectLanguageScreenState extends State<SelectLanguageScreen>
   int _selectedValue = lanBox.get("lanValue") ?? -1;
 
 final List<Map<String, dynamic>> localeList = [
+  {"name": "Français", "locale": "fr", "flag": "🇨🇲"},
   {"name": "English", "locale": "en", "flag": "🇬🇧"},
   {"name": "العربية (Arabic)", "locale": "ar", "flag": "🇸🇦"},
 ];
