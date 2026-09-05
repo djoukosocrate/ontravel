@@ -6,10 +6,12 @@ import 'package:ride_on/presentation/cubits/payment/coupon_cubit.dart';
 import 'package:ride_on/presentation/cubits/slider_cubit.dart';
 import 'package:ride_on/presentation/cubits/sos_cubit.dart';
 import 'package:ride_on/presentation/cubits/vehicle_data/get_service_type_cubit.dart';
+import '../data/repositories/assistant_repository.dart';
 import '../data/repositories/payment_repository.dart';
 import '../data/repositories/profile_repository.dart';
 import '../data/repositories/review_repository.dart';
 import '../data/repositories/vehicle_repository.dart';
+import '../presentation/cubits/assistant_cubit.dart';
 import '../presentation/cubits/auth/apple_login_cubit.dart';
 import '../presentation/cubits/auth/change_email_cubit.dart';
 import '../presentation/cubits/auth/change_phone_number_cubit.dart';
@@ -76,6 +78,7 @@ class RegisterCubits {
     BlocProvider(create: (context) => RideRequestCubit()),
     BlocProvider(create: (context) => GetRideRequestStatusCubit()),
     BlocProvider(create: (context) => ReviewCubit(ReviewRepository())),
+    BlocProvider(create: (context) => AssistantCubit(AssistantRepository())),
     BlocProvider(create: (context) => UpdatePaymentByUserCubit(PaymentRepository())),
     BlocProvider(create: (context) => PaymentCubit()),
     BlocProvider(create: (context) => UpdateRideRequestParameterCubit()),

@@ -6,16 +6,23 @@ import 'package:ride_on/core/utils/theme/theme_style.dart';
 import 'package:ride_on/core/utils/translate.dart';
 import 'package:ride_on/domain/entities/sos_data.dart';
 import 'package:ride_on/presentation/cubits/sos_cubit.dart';
+import 'package:ride_on/presentation/cubits/realtime/ride_request_cubit.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class SosButtonWidget extends StatefulWidget {
-  const SosButtonWidget({super.key});
+/// Live-ride safety actions: share the trip with a trusted contact via
+/// WhatsApp, or call an SOS contact instantly. Shown together so a
+/// passenger reaches for safety, not just emergency, during a ride.
+class SafetyActionsWidget extends StatefulWidget {
+  final double? driverLat;
+  final double? driverLng;
+
+  const SafetyActionsWidget({super.key, this.driverLat, this.driverLng});
 
   @override
-  State<SosButtonWidget> createState() => _SosButtonWidgetState();
+  State<SafetyActionsWidget> createState() => _SafetyActionsWidgetState();
 }
 
-class _SosButtonWidgetState extends State<SosButtonWidget>
+class _SafetyActionsWidgetState extends State<SafetyActionsWidget>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _animation;
@@ -45,13 +52,73 @@ class _SosButtonWidgetState extends State<SosButtonWidget>
     await launchUrl(launchUri);
   }
 
+  Future<void> _shareTrip(BuildContext context) async {
+    final rideState = context.read<RideRequestCubit>().state;
+
+    final driverName = rideState.acceptedDriverName.isNotEmpty
+        ? rideState.acceptedDriverName
+        : "mon chauffeur";
+    final vehicleNumber = rideState.acceptedDriverVechileNumber;
+    final pickup = rideState.pickupAddress;
+    final dropoff = rideState.dropOffAddress;
+    final hasLiveLocation = (widget.driverLat ?? 0.0) != 0.0 && (widget.driverLng ?? 0.0) != 0.0;
+    final lat = hasLiveLocation ? widget.driverLat! : rideState.acceptedDriverLat;
+    final lng = hasLiveLocation ? widget.driverLng! : rideState.acceptedDriverLng;
+
+    final buffer = StringBuffer()
+      ..writeln("Je suis en course avec OnTravel.")
+      ..writeln("Chauffeur : $driverName${vehicleNumber.isNotEmpty ? ' ($vehicleNumber)' : ''}");
+    if (pickup.isNotEmpty) buffer.writeln("Départ : $pickup");
+    if (dropoff.isNotEmpty) buffer.writeln("Destination : $dropoff");
+
+    if (lat != 0.0 && lng != 0.0) {
+      buffer.writeln("Position en direct : https://www.google.com/maps?q=$lat,$lng");
+    }
+
+    final message = Uri.encodeComponent(buffer.toString());
+    final whatsappUri = Uri.parse("https://wa.me/?text=$message");
+
+    if (await canLaunchUrl(whatsappUri)) {
+      await launchUrl(whatsappUri, mode: LaunchMode.externalApplication);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Padding(
-          padding: const EdgeInsets.only(right: 18, bottom: 18,left: 15),
+          padding: const EdgeInsets.only(bottom: 18, left: 15),
+          child: GestureDetector(
+            onTap: () => _shareTrip(context),
+            child: Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [themeColor2, themeColor2.withValues(alpha: .75)],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    color: themeColor2.withValues(alpha: .45),
+                    blurRadius: 20,
+                    spreadRadius: 2,
+                  ),
+                ],
+              ),
+              child: const Icon(
+                Icons.share_location_rounded,
+                color: Colors.white,
+                size: 20,
+              ),
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(right: 18, bottom: 18, left: 15),
           child: ScaleTransition(
             scale: _animation,
             child: GestureDetector(

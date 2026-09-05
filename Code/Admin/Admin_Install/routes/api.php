@@ -67,6 +67,9 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
     Route::post('/addEditVerificationDocuments', 'AppUsersApiController@addEditVerificationDocuments');
     Route::post('/getVerificationDocuments', 'AppUsersApiController@getVerificationDocuments');
 
+    // AI assistant
+    Route::post('/assistant/chat', 'AssistantApiController@chat');
+
     // UserProfile
     Route::post('/getUserProfile ', 'UserProfileController@getUserProfile');
     Route::post('/getUseritems ', 'UserProfileController@getUseritems');
