@@ -110,7 +110,7 @@
             <h4>Contact Us</h4>
             <p>
               If you have any questions about our privacy policy, please contact <a
-                href="/ovoride/demo/contact"><strong>with us</strong></a>. Our team is available to
+                href="index.php#contact"><strong>with us</strong></a>. Our team is available to
               assist you with any inquiries or concerns you may have regarding our privacy policy. We
               value your privacy and are committed to ensuring that your experience on our website is
               transparent and satisfactory.
