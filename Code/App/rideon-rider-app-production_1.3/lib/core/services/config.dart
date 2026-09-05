@@ -42,4 +42,5 @@ class Config {
   static const String sliders = 'sliders';
   static const String serviceTypes = 'service-types';
   static const String getItemTypesByService = 'item-types/by-service-type';
+  static const String assistantChat = 'assistant/chat';
 }

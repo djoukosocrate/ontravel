@@ -14,6 +14,7 @@ import '../cubits/logout_cubit.dart';
 import '../cubits/profile/edit_profile_cubit.dart';
 import '../cubits/realtime/update_ride_request_parameter.dart';
 import '../screens/Account/profile_screen.dart';
+import '../screens/assistant/assistant_chat_screen.dart';
 import '../screens/Account/setting_screen.dart';
 import '../screens/Account/static_screen.dart';
 import '../screens/Auth/login_screen.dart';
@@ -198,6 +199,21 @@ class _MyDrawerState extends State<MyDrawer> {
                                     data: "Help and Support",
                                     isBack: true,
                                   )));
+                    },
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  child: CustomRowItem(
+                    imagePath: "assets/images/Assistant.svg",
+                    title: "Assistant OnTravel".translate(context),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const AssistantChatScreen()));
                     },
                   ),
                 ),

@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'dart:ui' as ui;
 import 'package:geolocator/geolocator.dart';
 import 'package:ride_on/core/services/data_store.dart';
+import 'package:ride_on/core/services/voice_announcer.dart';
 import 'package:ride_on/core/extensions/workspace.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -517,6 +518,7 @@ class _SendRideRequestScreenState extends State<SendRideRequestScreen> {
                 listeners: [
                   BlocListener<GetRideRequestStatusCubit, String>(
                       listener: (context, status) {
+                    VoiceAnnouncer.instance.announceRideStatus(status);
                     if (status == "rejected") {
                       box.delete("rideId");
                       showDriverCancelledRideDialog(context);
@@ -957,7 +959,10 @@ class _SendRideRequestScreenState extends State<SendRideRequestScreen> {
           child: Stack(
             children: [
               rideStatus == "ongoing"
-                  ? const SosButtonWidget()
+                  ? SafetyActionsWidget(
+                      driverLat: updatedDriverLat,
+                      driverLng: updatedDriverLng,
+                    )
                   : const SizedBox(),
               Positioned(
                 top: 50,
