@@ -126,8 +126,8 @@ class SetCountryState extends Equatable {
 class SetCountryCubit extends Cubit<SetCountryState> {
   SetCountryCubit()
       : super(const SetCountryState(
-          dialCode: "+91",
-          countryCode: "IN",
+          dialCode: "+237",
+          countryCode: "CM",
         ));
 
   void setCountry({required String dialCode, required String countryCode}) {
@@ -137,6 +137,6 @@ class SetCountryCubit extends Cubit<SetCountryState> {
   void reset() {
    }
    void clear() {
-    emit(const SetCountryState(dialCode: "+91", countryCode: "IN"));
+    emit(const SetCountryState(dialCode: "+237", countryCode: "CM"));
   }
 }

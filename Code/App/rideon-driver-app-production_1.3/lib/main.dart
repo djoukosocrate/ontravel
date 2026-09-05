@@ -323,6 +323,7 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
                   debugShowCheckedModeBanner: false,
                   locale: appLocale,
                   supportedLocales: const [
+                    Locale('fr', 'FR'),
                     Locale('en', 'US'),
                     Locale('ar', 'AR'),
                   ],

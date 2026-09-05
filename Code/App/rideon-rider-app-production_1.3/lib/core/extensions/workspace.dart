@@ -8,6 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../presentation/cubits/book_ride_cubit.dart';
 
 final List locale = [
+  {'name': 'Français', 'locale': "fr"},
   {'name': 'English', 'locale': "en"},
   {'name': 'Arabic', 'locale': 'ar'}
 ];
@@ -16,8 +17,8 @@ final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 String token = "";
 LoginModel? loginModel;
-String selectedCountry = "+91";
-String defaultCountry = "IN";
+String selectedCountry = "+237";
+String defaultCountry = "CM";
 var loginWithSocialMedia = false;
 String bearerToken = box.get("bearerToken")??"";
 String myImage = "";
@@ -25,7 +26,7 @@ String myName = "";
 String socialEmail = "";
 String socialFirstName = "";
 String socialLastName = "";
-Locale appLocale = const Locale('en');
+Locale appLocale = const Locale('fr');
 var latitudeGlobal = "";
 var longitudeGlobal = "";
 dynamic oneSignalPlayerId = "";

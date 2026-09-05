@@ -23,6 +23,7 @@ String token = "";
 
 final List locale = [
 
+  {'name': 'Français', 'locale': "fr"},
   {'name': 'English', 'locale': "en"},
   {'name': 'Arabic', 'locale': 'ar'},
 
@@ -46,7 +47,7 @@ dynamic oneSignalToken = "";
 dynamic oneSignalOptedIn = "";
 String bearerToken = box.get("bearerToken")??"";
 
-Locale appLocale = const Locale('en');
+Locale appLocale = const Locale('fr');
 var latitudeGlobal = "";
 var longitudeGlobal = "";
 bool isFatechedData = false;
