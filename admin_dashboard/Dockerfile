@@ -7,7 +7,8 @@ FROM php:8.3-apache
 # et les classes *Grpc.php sont deja exclues de l'autoload par Composer lui-meme).
 # Les compiler ici couterait de longues minutes de build pour rien.
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        libzip-dev libpng-dev libjpeg62-turbo-dev libfreetype6-dev libicu-dev libonig-dev unzip git \
+        libzip-dev libpng-dev libjpeg62-turbo-dev libfreetype6-dev libicu-dev libonig-dev \
+        default-mysql-client unzip git \
     && docker-php-ext-configure gd --with-jpeg --with-freetype \
     && docker-php-ext-install -j"$(nproc)" pdo_mysql mbstring exif bcmath gd zip intl \
     && a2enmod rewrite \
